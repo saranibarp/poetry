@@ -1,7 +1,11 @@
-<h1><%= @poem.title.titleize %></h1>
+<div id="wrapper">
+  <div id="breadcrumbs"><%= link_to("Home", poems_path) + " - " + @poem.title.titleize %></div>
 
-<p>By <%= @poem.author.titleize %></p>
+  <h1><%= @poem.title.titleize %></h1>
 
-<%= simple_format(@poem.body) %>
+  <p id="author">By <%= @poem.author.titleize %></p>
 
-<a id="source" href="<%= @poem.source %>" target="_blank">Source</a>
+  <%= simple_format(@poem.body) %>
+
+  <a id="source" href="<%= @poem.source %>" target="_blank">Source</a>
+</div>

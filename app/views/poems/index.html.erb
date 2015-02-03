@@ -1,7 +1,9 @@
-<h1>Poems</h1>
+<div id="wrapper">
+  <h1>Poems</h1>
 
-<% @poems.each do |poem| %>
+  <% @poems.each do |poem| %>
 
-<h2><%= link_to(poem.title.titleize + " by " + poem.author.titleize, poem_path(poem)) %></h2>
+  <p id="poem"><%= link_to(poem.title.titleize + " by " + poem.author.titleize, poem_path(poem)) %></p>
 
-<% end %>
+  <% end %>
+</div>
